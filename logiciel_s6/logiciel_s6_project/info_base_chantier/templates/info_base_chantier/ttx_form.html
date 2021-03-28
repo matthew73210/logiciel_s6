@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'info_base_chantier_ttx_list' %}">
+    ttx Listing
+    </a>
+</p>
+    
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.errors}}
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="last_updated">last_updated: </label>
+  <input class="form-control col-sm-10" id="last_updated" type="datetime-local" name="last_updated" value="{{ object.last_updated }}" disabled>
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="pk_fin">pk_fin: </label>
+  <input class="form-control col-sm-10" id="pk_fin" type="number" name="pk_fin" value="{{ object.pk_fin }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="fonction">fonction: </label>
+  <input class="form-control col-sm-10" id="fonction" type="text" name="fonction" value="{{ object.fonction }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="pk_deput">pk_deput: </label>
+  <input class="form-control col-sm-10" id="pk_deput" type="number" name="pk_deput" value="{{ object.pk_deput }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="nom_ttx">nom_ttx: </label>
+  <input class="form-control col-sm-10" id="nom_ttx" type="text" name="nom_ttx" value="{{ object.nom_ttx }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="created">created: </label>
+  <input class="form-control col-sm-10" id="created" type="datetime-local" name="created" value="{{ object.created }}" disabled>
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="pk_engagment">pk_engagment: </label>
+  <input class="form-control col-sm-10" id="pk_engagment" type="number" name="pk_engagment" value="{{ object.pk_engagment }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="pk_degagment">pk_degagment: </label>
+  <input class="form-control col-sm-10" id="pk_degagment" type="number" name="pk_degagment" value="{{ object.pk_degagment }}">
+  </div>
+  <input type="submit" value="Save" class="btn btn-primary">
+</form>
+
+{% endblock %}

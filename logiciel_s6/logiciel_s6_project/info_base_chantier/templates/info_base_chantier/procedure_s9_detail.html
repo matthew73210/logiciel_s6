@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'info_base_chantier_procedure_s9_list' %}">
+    procedure_s9 Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>N_prog_jour</td><td>{{ object.N_prog_jour }}</td></tr>
+    <tr><td>nom_phase</td><td>{{ object.nom_phase }}</td></tr>
+    <tr><td>trx_nuit</td><td>{{ object.trx_nuit }}</td></tr>
+    <tr><td>DFV</td><td>{{ object.DFV }}</td></tr>
+    <tr><td>continuite_elec</td><td>{{ object.continuite_elec }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>active</td><td>{{ object.active }}</td></tr>
+    <tr><td>h_fin</td><td>{{ object.h_fin }}</td></tr>
+    <tr><td>date_debut_trx</td><td>{{ object.date_debut_trx }}</td></tr>
+    <tr><td>pk_fin</td><td>{{ object.pk_fin }}</td></tr>
+    <tr><td>Ct_Tx</td><td>{{ object.Ct_Tx }}</td></tr>
+    <tr><td>etat_surface_rail</td><td>{{ object.etat_surface_rail }}</td></tr>
+    <tr><td>pk_debut</td><td>{{ object.pk_debut }}</td></tr>
+    <tr><td>h_debut</td><td>{{ object.h_debut }}</td></tr>
+    <tr><td>GEq</td><td>{{ object.GEq }}</td></tr>
+    <tr><td>RCT</td><td>{{ object.RCT }}</td></tr>
+    <tr><td>indice_CtTx</td><td>{{ object.indice_CtTx }}</td></tr>
+    <tr><td>Voie</td><td>{{ object.Voie }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

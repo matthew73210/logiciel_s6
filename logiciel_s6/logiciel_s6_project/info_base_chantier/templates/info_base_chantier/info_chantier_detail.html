@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'info_base_chantier_info_chantier_list' %}">
+    info_chantier Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>numero_ligne</td><td>{{ object.numero_ligne }}</td></tr>
+    <tr><td>nbr_voies_travail</td><td>{{ object.nbr_voies_travail }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>date_debut_chantier</td><td>{{ object.date_debut_chantier }}</td></tr>
+    <tr><td>date_fin_chantier</td><td>{{ object.date_fin_chantier }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'info_base_chantier_personel_list' %}">
+    personel Listing
+    </a>
+</p>
+    
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.errors}}
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="created">created: </label>
+  <input class="form-control col-sm-10" id="created" type="datetime-local" name="created" value="{{ object.created }}" disabled>
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="telephone">telephone: </label>
+  <input class="form-control col-sm-10" id="telephone" type="text" name="telephone" value="{{ object.telephone }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="prenom">prenom: </label>
+  <input class="form-control col-sm-10" id="prenom" type="text" name="prenom" value="{{ object.prenom }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="last_updated">last_updated: </label>
+  <input class="form-control col-sm-10" id="last_updated" type="datetime-local" name="last_updated" value="{{ object.last_updated }}" disabled>
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="habilitation">habilitation: </label>
+  <input class="form-control col-sm-10" id="habilitation" type="text" name="habilitation" value="{{ object.habilitation }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="nom">nom: </label>
+  <input class="form-control col-sm-10" id="nom" type="text" name="nom" value="{{ object.nom }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="date_depart">date_depart: </label>
+  <input class="form-control col-sm-10" id="date_depart" type="date" name="date_depart" value="{{ object.date_depart }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="date_arrive">date_arrive: </label>
+  <input class="form-control col-sm-10" id="date_arrive" type="date" name="date_arrive" value="{{ object.date_arrive }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="fonction">fonction: </label>
+  <input class="form-control col-sm-10" id="fonction" type="text" name="fonction" value="{{ object.fonction }}">
+  </div>
+  <input type="submit" value="Save" class="btn btn-primary">
+</form>
+
+{% endblock %}

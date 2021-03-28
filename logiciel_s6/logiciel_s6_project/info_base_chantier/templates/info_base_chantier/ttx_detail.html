@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'info_base_chantier_ttx_list' %}">
+    ttx Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>pk_fin</td><td>{{ object.pk_fin }}</td></tr>
+    <tr><td>fonction</td><td>{{ object.fonction }}</td></tr>
+    <tr><td>pk_deput</td><td>{{ object.pk_deput }}</td></tr>
+    <tr><td>nom_ttx</td><td>{{ object.nom_ttx }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>pk_engagment</td><td>{{ object.pk_engagment }}</td></tr>
+    <tr><td>pk_degagment</td><td>{{ object.pk_degagment }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

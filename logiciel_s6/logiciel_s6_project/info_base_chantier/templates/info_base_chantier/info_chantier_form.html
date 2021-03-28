@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'info_base_chantier_info_chantier_list' %}">
+    info_chantier Listing
+    </a>
+</p>
+    
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.errors}}
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="numero_ligne">numero_ligne: </label>
+  <input class="form-control col-sm-10" id="numero_ligne" type="text" name="numero_ligne" value="{{ object.numero_ligne }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="nbr_voies_travail">nbr_voies_travail: </label>
+  <input class="form-control col-sm-10" id="nbr_voies_travail" type="text" name="nbr_voies_travail" value="{{ object.nbr_voies_travail }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="created">created: </label>
+  <input class="form-control col-sm-10" id="created" type="datetime-local" name="created" value="{{ object.created }}" disabled>
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="last_updated">last_updated: </label>
+  <input class="form-control col-sm-10" id="last_updated" type="datetime-local" name="last_updated" value="{{ object.last_updated }}" disabled>
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="date_debut_chantier">date_debut_chantier: </label>
+  <input class="form-control col-sm-10" id="date_debut_chantier" type="date" name="date_debut_chantier" value="{{ object.date_debut_chantier }}">
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="date_fin_chantier">date_fin_chantier: </label>
+  <input class="form-control col-sm-10" id="date_fin_chantier" type="date" name="date_fin_chantier" value="{{ object.date_fin_chantier }}">
+  </div>
+  <input type="submit" value="Save" class="btn btn-primary">
+</form>
+
+{% endblock %}

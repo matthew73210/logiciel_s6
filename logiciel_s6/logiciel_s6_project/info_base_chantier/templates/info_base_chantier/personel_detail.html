@@ -1,0 +1,25 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'info_base_chantier_personel_list' %}">
+    personel Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>telephone</td><td>{{ object.telephone }}</td></tr>
+    <tr><td>prenom</td><td>{{ object.prenom }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>habilitation</td><td>{{ object.habilitation }}</td></tr>
+    <tr><td>nom</td><td>{{ object.nom }}</td></tr>
+    <tr><td>date_depart</td><td>{{ object.date_depart }}</td></tr>
+    <tr><td>date_arrive</td><td>{{ object.date_arrive }}</td></tr>
+    <tr><td>fonction</td><td>{{ object.fonction }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}
