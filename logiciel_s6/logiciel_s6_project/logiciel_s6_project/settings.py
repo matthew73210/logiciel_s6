@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'info_base_chantier',
+    'dashboard',
     #'channels',
 ]
 
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'logiciel_s6_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,5 +123,5 @@ USE_TZ = True
 # could use os.path.join(BASE_DIR, '...') if import errors arrise
 
 STATIC_URL = '/static/'
-STATICFILES_DIR = 'logiciel_s6_project/static'
-STATIC_ROOT = 'static'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
