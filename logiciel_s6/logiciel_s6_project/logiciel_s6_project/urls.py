@@ -19,7 +19,15 @@ from django.urls import path, include
 
 urlpatterns = [
     #path('', TemplateView.as_view(template_name='index.html'), name='index'),
-    #path('info_base_chantier/', include('info_base_chantier.urls')),
+    path('info_base_chantier/', include('info_base_chantier.urls')),
+    
     path('', include('dashboard.urls')),
+    path('IS/', include('IS.urls')),
+    path('S9/', include('S9.urls')),
+    path('S6/', include('S6.urls')),
+    path('LTV/', include('LTV.urls')),
+    path('PN/', include('PN.urls')),
+    path('TTx/', include('TTx.urls')),
+
     path('admin/', admin.site.urls),
 ]

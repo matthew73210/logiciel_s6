@@ -1,6 +1,10 @@
 from django.views import generic
+from django.shortcuts import render
 from . import models
 from . import forms
+
+def index(request):
+    return render(request, 'info_base_chantier/index.html')
 
 
 class procedure_s9ListView(generic.ListView):

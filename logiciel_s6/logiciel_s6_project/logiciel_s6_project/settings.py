@@ -40,6 +40,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'info_base_chantier',
     'dashboard',
+    'IS',
+    'LTV',
+    'PN',
+    'S6',
+    'S9',
+    'TTx',
     #'channels',
 ]
 

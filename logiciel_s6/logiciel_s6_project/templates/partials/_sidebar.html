@@ -1,52 +1,52 @@
 {% load static %}
 
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+<nav id="sidebarMenu" class="col-auto d-md-block bg-light sidebar sidebar-sticky">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="{% url 'dashboard' %}">
               <span data-feather="home"></span>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{% url 'S9' %}">
               <span data-feather="file"></span>
               S9
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{% url 'S6' %}">
               <span data-feather="shopping-cart"></span>
               S6
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{% url 'LTV' %}">
               <span data-feather="users"></span>
               LTV
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{% url 'PN' %}">
               <span data-feather="bar-chart-2"></span>
               PN
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{% url 'IS' %}">
               <span data-feather="layers"></span>
               IS
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{% url 'TTx' %}">
               <span data-feather="layers"></span>
               TTx
             </a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{% url 'info_base_chantier' %}">
               <span data-feather="layers"></span>
               Données
             </a>
