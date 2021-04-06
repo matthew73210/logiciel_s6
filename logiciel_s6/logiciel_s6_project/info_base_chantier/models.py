@@ -113,6 +113,7 @@ class personel(models.Model):
 class info_chantier(models.Model):
 
     # Fields
+    nom_chantier = models.CharField(max_length=100)
     numero_ligne = models.CharField(max_length=30)
     nbr_voies_travail = models.TextField(max_length=100)
     created = models.DateTimeField(auto_now_add=True, editable=False)

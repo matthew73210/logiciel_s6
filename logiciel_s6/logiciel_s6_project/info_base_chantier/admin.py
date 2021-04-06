@@ -154,6 +154,7 @@ class info_chantierAdminForm(forms.ModelForm):
 class info_chantierAdmin(admin.ModelAdmin):
     form = info_chantierAdminForm
     list_display = [
+        "nom_chantier",
         "numero_ligne",
         "nbr_voies_travail",
         "created",
@@ -162,6 +163,7 @@ class info_chantierAdmin(admin.ModelAdmin):
         "date_fin_chantier",
     ]
     readonly_fields = [
+        "nom_chantier",
         "numero_ligne",
         "nbr_voies_travail",
         "created",

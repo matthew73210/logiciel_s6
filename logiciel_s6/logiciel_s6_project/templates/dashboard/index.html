@@ -7,19 +7,13 @@
 <div class="card col-auto">
 
     <div class="card-body">
-        <h1>dashbord index page</h1>
+        
+        {% for nom_chantier in info_chantier_dashboard  %}
 
-        <ul class="list-group">
-            <li class="list-group">sncf</li>
-            <li class="list-group">sncf</li>
-            <li class="list-group">sncf</li>
-            <li class="list-group">sncf</li>
-            <li class="list-group">sncf</li>
-            <li class="list-group">sncf</li>
-            <li class="list-group">sncf</li>
+            <h1>Résumé du Chantier: {{ nom_chantier.nom_chantier }} </h1>
 
+        {% endfor %}
 
-        </ul>
     </div>
 </div>
 {% endblock content %}

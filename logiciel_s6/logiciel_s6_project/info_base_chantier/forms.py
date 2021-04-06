@@ -66,6 +66,7 @@ class info_chantierForm(forms.ModelForm):
     class Meta:
         model = models.info_chantier
         fields = [
+            "nom_chantier",
             "numero_ligne",
             "nbr_voies_travail",
             "date_debut_chantier",

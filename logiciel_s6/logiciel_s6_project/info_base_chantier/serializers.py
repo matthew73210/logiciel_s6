@@ -76,6 +76,7 @@ class info_chantierSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.info_chantier
         fields = [
+            "nom_chantier",
             "numero_ligne",
             "nbr_voies_travail",
             "created",

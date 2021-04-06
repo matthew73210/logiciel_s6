@@ -13,6 +13,10 @@
   {% csrf_token %}
   {{form.errors}}
   <div class="form-group row">
+  <label class="col-sm-2 col-form-label" for="nom_chantier">nom_chantier: </label>
+  <input class="form-control col-sm-10" id="nom_chantier" type="text" name="nom_chantier" value="{{ object.nom_chantier }}">
+  </div>
+  <div class="form-group row">
   <label class="col-sm-2 col-form-label" for="numero_ligne">numero_ligne: </label>
   <input class="form-control col-sm-10" id="numero_ligne" type="text" name="numero_ligne" value="{{ object.numero_ligne }}">
   </div>
