@@ -9,7 +9,7 @@
     <div class="card-body">
         <h1>info base chantier index page</h1>
 
-        <ul class="list-group">
+        <ul class="list-group"> <!-- Just to test and remember pages -->
             <li class="list-group">sncf</li>
             <li class="list-group">sncf</li>
             <li class="list-group">sncf</li>
@@ -21,14 +21,19 @@
 
         </ul>
     </div>
-    <div class="card-body">
+    <div class="card-body"> <!-- Links to be able to go through data and modifiy -->
         <div class="m-2"><h4>info_base_chantier</h4></div>
         <div class="m-2"><a class="btn btn-light" href="{% url 'info_base_chantier_chantier_se_list' %}">chantier_se Listing</a></div>
         <div class="m-2"><a class="btn btn-light" href="{% url 'info_base_chantier_procedure_s9_list' %}">procedure_s9 Listing</a></div>
         <div class="m-2"><a class="btn btn-light" href="{% url 'info_base_chantier_personel_list' %}">personel Listing</a></div>
         <div class="m-2"><a class="btn btn-light" href="{% url 'info_base_chantier_ttx_list' %}">ttx Listing</a></div>
         <div class="m-2"><a class="btn btn-light" href="{% url 'info_base_chantier_info_chantier_list' %}">info_chantier Listing</a></div>
-
     </div>
+
+    <div class="card-body"> <!-- Export data to xlsx -->
+        <a href="{% url 'export-excel' %}" class="btn btn-primary">Export Excel</a>
+    </div>
+
+
 </div>
 {% endblock content %}

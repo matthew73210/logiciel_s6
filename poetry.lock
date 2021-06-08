@@ -256,14 +256,6 @@ python-versions = "*"
 scripts = ["click (>=6.0)", "twisted (>=16.4.0)"]
 
 [[package]]
-name = "lml"
-version = "0.1.0"
-description = "Load me later. A lazy plugin management system."
-category = "main"
-optional = false
-python-versions = "*"
-
-[[package]]
 name = "markdown"
 version = "3.3.4"
 description = "Python implementation of Markdown."
@@ -368,34 +360,6 @@ description = "C parser in Python"
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-
-[[package]]
-name = "pyexcel-io"
-version = "0.6.4"
-description = "A python library to read and write structured data in csv, zipped csvformat and to/from databases"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-lml = ">=0.0.4"
-
-[package.extras]
-ods = ["pyexcel-ods3 (>=0.6.0)"]
-xls = ["pyexcel-xls (>=0.6.0)"]
-xlsx = ["pyexcel-xlsx (>=0.6.0)"]
-
-[[package]]
-name = "pyexcel-xlsx"
-version = "0.6.0"
-description = "A wrapper library to read, manipulate and write data in xlsx and xlsmformat"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-openpyxl = ">=2.6.1"
-pyexcel-io = ">=0.6.2"
 
 [[package]]
 name = "pyopenssl"
@@ -622,7 +586,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "3bdf35743fb3e009f347ed299604333cd01de8c767fd925a52290f990d33d2d2"
+content-hash = "df059f97888c9fff7bc36fe9689573957b47d494f46222375cc1f4c6264acad5"
 
 [metadata.files]
 asgiref = [
@@ -754,10 +718,6 @@ incremental = [
     {file = "incremental-21.3.0-py2.py3-none-any.whl", hash = "sha256:92014aebc6a20b78a8084cdd5645eeaa7f74b8933f70fa3ada2cfbd1e3b54321"},
     {file = "incremental-21.3.0.tar.gz", hash = "sha256:02f5de5aff48f6b9f665d99d48bfc7ec03b6e3943210de7cfc88856d755d6f57"},
 ]
-lml = [
-    {file = "lml-0.1.0-py2.py3-none-any.whl", hash = "sha256:ec06e850019942a485639c8c2a26bdb99eae24505bee7492b649df98a0bed101"},
-    {file = "lml-0.1.0.tar.gz", hash = "sha256:57a085a29bb7991d70d41c6c3144c560a8e35b4c1030ffb36d85fa058773bcc5"},
-]
 markdown = [
     {file = "Markdown-3.3.4-py3-none-any.whl", hash = "sha256:96c3ba1261de2f7547b46a00ea8463832c921d3f9d6aba3f255a6f71386db20c"},
     {file = "Markdown-3.3.4.tar.gz", hash = "sha256:31b5b491868dcc87d6c24b7e3d19a0d730d59d3e46f4eea6430a321bed387a49"},
@@ -822,14 +782,6 @@ pyasn1-modules = [
 pycparser = [
     {file = "pycparser-2.20-py2.py3-none-any.whl", hash = "sha256:7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705"},
     {file = "pycparser-2.20.tar.gz", hash = "sha256:2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0"},
-]
-pyexcel-io = [
-    {file = "pyexcel-io-0.6.4.tar.gz", hash = "sha256:00f15f4bae2947de49b3206f2600f78780008e044380f7aafe0ce52969cda4ca"},
-    {file = "pyexcel_io-0.6.4-py2.py3-none-any.whl", hash = "sha256:3d7e78ad3344e4755726e1b1fa605b0e95cb76acfc4e6ff0ca0fc2e8303ded38"},
-]
-pyexcel-xlsx = [
-    {file = "pyexcel-xlsx-0.6.0.tar.gz", hash = "sha256:55754f764252461aca6871db203f4bd1370ec877828e305e6be1de5f9aa6a79d"},
-    {file = "pyexcel_xlsx-0.6.0-py2.py3-none-any.whl", hash = "sha256:16530f96a77c97ebcba7941517d2756ac52d3ce2903d81eecd7f300778d5242a"},
 ]
 pyopenssl = [
     {file = "pyOpenSSL-20.0.1-py2.py3-none-any.whl", hash = "sha256:818ae18e06922c066f777a33f1fca45786d85edfe71cd043de6379337a7f274b"},

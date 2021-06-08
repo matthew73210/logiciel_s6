@@ -14,6 +14,11 @@ router.register("info_chantier", api.info_chantierViewSet)
 
 urlpatterns = (
     path('', views.index, name="info_base_chantier"),
+    path('export_excel', views.export_excel, name="export-excel"),
+    
+    
+    
+    
     path("api/v1/", include(router.urls)),
     path("info_base_chantier/procedure_s9/", views.procedure_s9ListView.as_view(), name="info_base_chantier_procedure_s9_list"),
     path("info_base_chantier/procedure_s9/create/", views.procedure_s9CreateView.as_view(), name="info_base_chantier_procedure_s9_create"),

@@ -1,10 +1,13 @@
 from django.views import generic
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
 from . import models
 from . import forms
 
 def index(request):
     return render(request, 'info_base_chantier/index.html')
+
+def export_excel(request):
+    response=HttpResponse(content_type='') #add function to create excel file
 
 
 class procedure_s9ListView(generic.ListView):
